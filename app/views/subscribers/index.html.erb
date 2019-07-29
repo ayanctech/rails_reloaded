@@ -1,4 +1,3 @@
-
 <% flash.each do |key, msg| %>
   <div class="alert alert-<%= key %>"><%= msg %></div>
 <% end %>
@@ -14,9 +13,9 @@
 
 <h3>Check any option and Download</h3>
 
-<%= link_to "<button>Download PDF</button>".html_safe, download_pdf_subscribers_path(:format => "pdf") %>
+<%= link_to "<button>Download PDF</button>".html_safe, download_pdf_subscribers_path(format: "pdf") %>
 
-<%= link_to "<button>Download csv</button>".html_safe, download_csv_subscribers_path(:format => "csv") %>
+<%= link_to "<button>Download csv</button>".html_safe, download_csv_subscribers_path(format: "csv") %>
 
 <%= link_to "<button>Send Email</button>".html_safe, send_mail_subscribers_path %>
 
