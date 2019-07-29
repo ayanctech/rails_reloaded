@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Data Mail</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid black;
+      }
+
+      table,tr,th,td {
+        border: 1px solid black;
+        vertical-align: top;
+        text-align: left;
+        padding: 3px;
+      }
+    </style>
+  </head>
+
+  <body>
+    Thank you for testing
+
+    <table summary="Users list">
+      <tr>
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+      <% @subs.each do |u| %>
+        <tr>
+          <td><%= u.id%></td>
+          <td><%= u.name%></td>
+          <td><%= u.email %></td>
+          <td ><%= u.phone %></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+  
+</html>

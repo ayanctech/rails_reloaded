@@ -1,0 +1,27 @@
+
+<% flash.each do |key, msg| %>
+  <div class="alert alert-<%= key %>"><%= msg %></div>
+<% end %>
+
+
+<h1>Subscribers Console</h1>
+
+<div class="outer_world">
+  <%= link_to "Users CRUD Center",users_path %>
+
+  <%= link_to "Post Images",posts_path %>
+</div>
+
+<h3>Check any option and Download</h3>
+
+<%= link_to "<button>Download PDF</button>".html_safe, download_pdf_subscribers_path(:format => "pdf") %>
+
+<%= link_to "<button>Download csv</button>".html_safe, download_csv_subscribers_path(:format => "csv") %>
+
+<%= link_to "<button>Send Email</button>".html_safe, send_mail_subscribers_path %>
+
+<div class="info">
+  <h3>Question from 1-5 Answers are here in the current Subscribers page</h3>
+  <h3>Question 6 Answer can be found By clicking Post Images Option</h3>
+  <h3>Question 7 Answer can be found By clicking User CRUD Center Option</h3>
+</div>
