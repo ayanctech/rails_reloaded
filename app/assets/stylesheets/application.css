@@ -31,6 +31,10 @@ table,tr,th,td{
   border: 1px double magenta;
   border-collapse: collapse;
 }
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
 .outer_world a{
   margin-right: 5vw;
 }
