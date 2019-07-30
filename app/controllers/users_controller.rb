@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to user_path(@user),flash: { success: "User successfully created." }
+      redirect_to user_path(@user), flash: { success: "User successfully created." }
     else
       render("new")
     end
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      redirect_to user_path(@user),flash: { success: "user successfully updated." }
+      redirect_to user_path(@user), flash: { success: "user successfully updated." }
     else
       render("edit")
     end

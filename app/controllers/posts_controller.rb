@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to post_path(@post),flash: { success: "Post successfully created." }
+      redirect_to post_path(@post), flash: { success: "Post successfully created." }
     else
       render("new")
     end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to post_path(@post),flash: { notice: "post successfully updated." }
+      redirect_to post_path(@post), flash: { notice: "post successfully updated." }
     else
       render("edit")
     end
