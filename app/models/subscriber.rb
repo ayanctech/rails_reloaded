@@ -6,7 +6,7 @@ class Subscriber < ApplicationRecord
   validates :phone, uniqueness: true
 
   def self.to_csv
-    attributes = %w{name email phone}
+    attributes = %w{ name email phone }
 
     CSV.generate(headers: true) do |csv|
       csv << attributes
