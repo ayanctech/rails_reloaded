@@ -15,7 +15,7 @@ class SubscribersController < ApplicationController
           send_data pdf.render,
             filename: "subscribers-#{Date.today}.pdf",
             type: "application/pdf",
-            disposition: "inline"
+            disposition: "attachment"
         end
       end
     end
