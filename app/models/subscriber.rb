@@ -1,6 +1,10 @@
 require "csv"
 
 class Subscriber < ApplicationRecord
+  validates :name, uniqueness: true
+  validates :email, uniqueness: true
+  validates :phone, uniqueness: true
+
   def self.to_csv
     attributes = %w{name email phone}
 
@@ -12,5 +16,5 @@ class Subscriber < ApplicationRecord
       end
     end
   end
-  
+
 end
