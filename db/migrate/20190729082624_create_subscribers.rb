@@ -5,9 +5,9 @@ class CreateSubscribers < ActiveRecord::Migration[5.2]
       t.string :email, null: false
       t.string :phone, null: false
 
-      t.index [ :name ], unique: true
-      t.index [ :email ], unique: true
-      t.index [ :phone ], unique: true
+      t.index [:name], unique: true
+      t.index [:email], unique: true
+      t.index [:phone], unique: true
       t.timestamps
     end
   end
