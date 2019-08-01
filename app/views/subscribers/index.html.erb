@@ -10,7 +10,26 @@
 
   <%= link_to "Post Images",posts_path %>
 </div>
-
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <td>Nmae</td>
+        <td>Email</td>
+        <td>Phone</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @subscribers.each do |s| %>
+        <tr>
+          <td><%= s.name %></td>
+          <td><%= s.email %></td>
+          <td><%= s.phone %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <h3>Check any option and Download</h3>
 
 <%= link_to "<button>Download PDF</button>".html_safe, download_pdf_subscribers_path(format: "pdf") %>

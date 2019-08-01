@@ -1,6 +1,6 @@
 class SubscribersController < ApplicationController
-  before_action :seed_db, except: [:index]
-  
+  before_action :fill_db, except: [:index]
+
   def index
     @subscribers = Subscriber.all
   end
@@ -33,7 +33,7 @@ class SubscribersController < ApplicationController
   end
 
   private
-  def seed_db
+  def fill_db
     if Subscriber.count < 50
       redirect_to (root_path), flash: { notice: "Seeding the DB is done...You can use the service now"}
       Rails.application.load_seed

@@ -13,20 +13,29 @@
  *= require_tree .
  *= require_self
  */
- a{
+ a {
    text-decoration: none;
  }
- a:hover{
+ a:hover {
    text-decoration: underline;
    color: green;
  }
-.show-post img{
+.show-post img {
   border: 1px solid brown;
   padding: 10px;
   width: 60vw;
   height: 70vh;
 }
-table,tr,th,td{
+.table-container {
+  border: 1px solid crimson;
+  padding-top: 1vw;
+  height: 60vh !important;
+  display: flex;
+  overflow: scroll;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+table,tr,th,td {
   padding: 5px;
   border: 1px double magenta;
   border-collapse: collapse;
