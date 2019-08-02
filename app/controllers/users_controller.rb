@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to users_path, flash: { notice: "User was successfully destroyed." }
+    redirect_to users_path, flash: { info: "User was successfully destroyed." }
 
   end
 

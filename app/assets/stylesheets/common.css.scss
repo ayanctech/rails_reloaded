@@ -1,0 +1,69 @@
+.link-option {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: green;
+  }
+}
+
+.show-table-data {
+  padding: 5px;
+  border: 1px double rgb(75,0,130);
+  border-collapse: collapse;
+  tr, th, td {
+    padding: 5px;
+    border: 1px double rgb(75,0,90);
+    border-collapse: collapse;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.alert {
+  padding: 15px !important;
+}
+
+/*flash*/
+.alert-error {
+  background-color: rgb(220,0,0);
+  border-color: rgb(120,120,60);
+  color: rgb(139,0,0);
+  text-align: center;
+}
+
+.alert-success {
+  background-color: rgb(50,205,50);
+  border-color: rgb(34,139,34);
+  color: rgb(140,20,10);
+  text-align: center;
+}
+
+.alert-notice {
+  background-color: rgb(144,238,144);
+  border-color: rgb(30,144,255);
+  color: rgb(0,0,139);
+  text-align: center;
+}
+
+
+/*post*/
+.show-post {
+  border: 1px solid rgb(120,20,160);
+  padding: 10px;
+  width: 60vw;
+  height: 70vh;
+}
+
+.instrutions .link-option {
+  margin-right: 5vw;
+}
+
+.info {
+  margin: 10px;
+  padding: 10px;
+  border: 1px dotted rgb(20,20,60);
+}

@@ -7,4 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 50.times do
   Subscriber.create(name: Faker::Name.unique.name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+  Student.create(name: Faker::Name.unique.name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+  Employee.create(name: Faker::Name.unique.name, email: Faker::Internet.email, phone: Faker::PhoneNumber.cell_phone)
+
 end

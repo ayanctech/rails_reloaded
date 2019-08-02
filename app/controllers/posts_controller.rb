@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to post_path(@post), flash: { notice: "post successfully updated." }
+      redirect_to post_path(@post), flash: { info: "post successfully updated." }
     else
       render("edit")
     end
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path, flash: { notice: "Post was successfully destroyed." }
+    redirect_to posts_path, flash: { info: "Post was successfully destroyed." }
 
   end
 

@@ -1,6 +1,6 @@
-<%= error_messages_for(post) %>
+<%= error_messages_for(@post) %>
 
-<%= form_for(post) do |form| %>
+<%= form_for(@post) do |form| %>
 
   <div class="field">
     <%= form.label :title %>
@@ -15,6 +15,6 @@
     <%= form.submit %>
   </div>
 
-  <%= link_to "Back", posts_path %>
+  <%= link_to "Back", posts_path, class: "link-option" %>
 
 <% end %>

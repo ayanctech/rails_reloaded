@@ -5,10 +5,9 @@ class Post < ApplicationRecord
 
   private
   def correct_image
-    if picture.attached?
-      true
-    else
+    unless picture.attached?
       errors.add(:picture,"should be attached !")
     end
   end
+
 end

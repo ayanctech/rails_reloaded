@@ -1,8 +1,4 @@
-<% flash.each do |key, msg| %>
-  <div class="alert alert-<%= key %>"><%= msg %></div>
-<% end %>
-
-<%= link_to "Back", root_path %>
+<%= link_to "Back", root_path, class: "link-option" %>
 
 <h1>Users</h1>
 
@@ -12,10 +8,10 @@
     <%= submit_tag "Search" , name: nil %>
   <% end %>
 
-  <%= link_to "Reset", users_path %>
+  <%= link_to "Reset", users_path, class: "link-option" %>
 </div>
 
-<table>
+<table class="show-table-data">
   <thead>
     <tr>
       <th>Name</th>
@@ -29,9 +25,9 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= link_to "Show", user %></td>
-        <td><%= link_to "Edit", edit_user_path(user) %></td>
-        <td><%= link_to "Destroy", user, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        <td><%= link_to "Show", user, class: "link-option" %></td>
+        <td><%= link_to "Edit", edit_user_path(user), class: "link-option" %></td>
+        <td><%= link_to "Destroy", user, method: :delete, data: { confirm: "Are you sure?" }, class: "link-option" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +35,4 @@
 
 <br>
 
-<%= link_to "New User", new_user_path %>
+<%= link_to "New User", new_user_path, class: "link-option" %>

@@ -1,16 +1,16 @@
 class SubscribersController < ApplicationController
-  before_action :fill_db, except: [:index]
 
   def index
     @subscribers = Subscriber.all
   end
 
   def download_pdf
+    @employees=Employee.all.order("name ASC")
     respond_to do |format|
       format.pdf do
-        pdf = PdfCreator.new(@subscribers)
+        pdf = PdfCreator.new(@employees)
         send_data pdf.render,
-          filename: "subscribers-#{Date.today}.pdf",
+          filename: "Employees-#{Date.today}.pdf",
           type: "application/pdf",
           disposition: "attachment"
       end
@@ -18,6 +18,7 @@ class SubscribersController < ApplicationController
   end
 
   def download_csv
+    @subscribers=Subscriber.all.order("name ASC")
     respond_to do |format|
       format.html
       format.csv { send_data @subscribers.to_csv, filename: "subscribers-#{Date.today}.csv" }
@@ -25,20 +26,11 @@ class SubscribersController < ApplicationController
   end
 
   def send_mail
-    if AdminMailer.data_table(@subscribers).deliver
-      redirect_to (root_path), flash: { notice: "Mail sent"}
+    @students=Student.all.order("name ASC")
+    if AdminMailer.data_table(@students).deliver
+      redirect_to (root_path), flash: { info: "Mail sent"}
     else
-      redirect_to (root_path), flash: { error: "Mail sending error"}
-    end
-  end
-
-  private
-  def fill_db
-    if Subscriber.count < 50
-      redirect_to (root_path), flash: { notice: "Seeding the DB is done...You can use the service now"}
-      Rails.application.load_seed
-    else
-      @subscribers=Subscriber.all.order("name ASC")
+      redirect_to (root_path), flash: { danger: "Mail sending error"}
     end
   end
 

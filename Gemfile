@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
+gem 'bootstrap', '~> 4.3.1'
+
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 gem "letter_opener", :group => :development

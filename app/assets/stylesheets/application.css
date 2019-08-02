@@ -10,71 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+ * require_tree .
+ *= require common
  *= require_self
  */
- a {
-   text-decoration: none;
- }
- a:hover {
-   text-decoration: underline;
-   color: green;
- }
-.show-post img {
-  border: 1px solid brown;
-  padding: 10px;
-  width: 60vw;
-  height: 70vh;
-}
-.table-container {
-  border: 1px solid crimson;
-  padding-top: 1vw;
-  height: 60vh !important;
-  display: flex;
-  overflow: scroll;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-table,tr,th,td {
-  padding: 5px;
-  border: 1px double magenta;
-  border-collapse: collapse;
-}
-div.field, div.actions {
-  margin-bottom: 10px;
-}
-
-.instrutions a{
-  margin-right: 5vw;
-}
-
-.info{
-  margin: 10px;
-  padding: 10px;
-  border: 1px dotted darkkhaki;
-}
-
-.alert{
-  padding: 15px !important;
-}
-/*flash*/
-.alert-error {
-  background-color: red;
-  border-color: crimson;
-  color: maroon;
-  text-align: center;
-}
-
-.alert-success {
-  background-color: green;
-  border-color: green;
-  color: white;
-  text-align: center;
-}
-
-.alert-notice {
-  background-color: skyblue;
-  border-color: blue;
-  color: darkblue;
-  text-align: center;
-}

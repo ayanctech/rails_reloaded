@@ -1,35 +1,12 @@
-<% flash.each do |key, msg| %>
-  <div class="alert alert-<%= key %>"><%= msg %></div>
-<% end %>
-
 
 <h1>Subscribers Console</h1>
 
 <div class="instrutions">
-  <%= link_to "Users CRUD Center",users_path %>
+  <%= link_to "Users CRUD Center",users_path, class: "link-option" %>
 
-  <%= link_to "Post Images",posts_path %>
+  <%= link_to "Post Images",posts_path, class: "link-option" %>
 </div>
-<div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <td>Nmae</td>
-        <td>Email</td>
-        <td>Phone</td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @subscribers.each do |s| %>
-        <tr>
-          <td><%= s.name %></td>
-          <td><%= s.email %></td>
-          <td><%= s.phone %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+
 <h3>Check any option and Download</h3>
 
 <%= link_to "<button>Download PDF</button>".html_safe, download_pdf_subscribers_path(format: "pdf") %>

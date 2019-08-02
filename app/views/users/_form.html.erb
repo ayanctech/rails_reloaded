@@ -1,6 +1,6 @@
-<%= error_messages_for(user) %>
+<%= error_messages_for(@user) %>
 
-<%= form_for(user) do |form| %>
+<%= form_for(@user) do |form| %>
 
   <div class="field">
     <%= form.label :name %>
@@ -9,13 +9,13 @@
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.email_field :email, required:true%>
+    <%= form.email_field :email, required:true %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 
-  <%= link_to "Back", users_path %>
+  <%= link_to "Back", users_path, class: "link-option" %>
 
 <% end %>
